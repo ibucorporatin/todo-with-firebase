@@ -7,12 +7,12 @@ const router = createBrowserRouter([
     path: "/",
     element: (
       <PrivateRoute>
-      <Dashboard />
+        <Dashboard />
       </PrivateRoute>
     ),
   },
   {
-    path: "login",
+    path: "/login",
     element: <Login />,
   },
 ]);
