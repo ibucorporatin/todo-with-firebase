@@ -1,9 +1,10 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import PrivateRoute from "./routeProtector/PrivateRoute";
+import Login from "./pages/login/Login";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <PrivateRoute />,
+    element: <Login />,
   },
 ]);
 function App() {
