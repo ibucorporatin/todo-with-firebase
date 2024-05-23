@@ -14,7 +14,6 @@ function Login() {
     try {
       signInWithPopup(auth, provider).then((data) => {
         localStorage.setItem("uid", data?.user?.uid);
-        navigate("/", { replace: true });
       });
     } catch (error) {
       alert(error.message);
