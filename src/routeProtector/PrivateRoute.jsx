@@ -1,18 +1,12 @@
-import React, { useEffect, useState } from "react";
-import Login from "../pages/login/Login";
-import Dashboard from "../pages/Dashboard/Dashboard";
+import React from "react";
+import { Navigate } from "react-router-dom";
 
-function PrivateRoute() {
+function PrivateRoute({ children }) {
   const uid = localStorage.getItem("uid");
-  const [auth, setauth] = useState(false);
-  useEffect(() => {
-    setauth(true);
-  }, [uid]);
-
-  if (!auth) {
-    return <Login />;
+  if (!uid) {
+    return <Navigate to="/login" />;
   }
-  return <Dashboard />;
+  return children;
 }
 
 export default PrivateRoute;

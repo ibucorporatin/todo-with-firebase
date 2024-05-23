@@ -7,11 +7,14 @@ import background from "../../assets/images/background.png";
 import "./login.css";
 import { signInWithPopup } from "firebase/auth";
 import { auth, provider } from "../../config";
+import { useNavigate } from "react-router-dom";
 function Login() {
+  const navigate = useNavigate();
   const onLogin = () => {
     try {
       signInWithPopup(auth, provider).then((data) => {
         localStorage.setItem("uid", data?.user?.uid);
+        navigate("/", { replace: true });
       });
     } catch (error) {
       alert(error.message);
