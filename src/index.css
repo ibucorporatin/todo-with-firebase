@@ -1,0 +1,44 @@
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Roboto;
+  overflow-x: hidden;
+}
+button {
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+
+}
+
+
+.max-container{
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1440px;
+}
+
+.padding-container{
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+
+}
+
+.login {
+  transform: scale(0.8);
+ }
+
+
+
+@media (min-width: 1024px) {
+  .padding-container {
+      padding-left: 5rem;
+      padding-right: 5rem;
+  }
+}
